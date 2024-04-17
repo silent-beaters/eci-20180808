@@ -5616,15 +5616,15 @@ func (s *DescribeContainerGroupStatusResponseBody) SetTotalCount(v int32) *Descr
 
 type DescribeContainerGroupStatusResponseBodyData struct {
 	// The collection of the status about the container groups.
-	ContainerGroupId *string `json:"ContainerGroupId,omitempty" xml:"ContainerGroupId,omitempty"`
+	ContainerGroupId *string `json:"containerGroupId,omitempty" xml:"containerGroupId,omitempty"`
 	// The name of the container.
-	Name *string `json:"Name,omitempty" xml:"Name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name,omitempty"`
 	// Indicates whether the container is ready for use.
-	Namespace *string `json:"Namespace,omitempty" xml:"Namespace,omitempty"`
+	Namespace *string `json:"namespace,omitempty" xml:"namespace,omitempty"`
 	// The event message.
-	PodStatus *DescribeContainerGroupStatusResponseBodyDataPodStatus `json:"PodStatus,omitempty" xml:"PodStatus,omitempty" type:"Struct"`
+	PodStatus *DescribeContainerGroupStatusResponseBodyDataPodStatus `json:"podStatus,omitempty" xml:"podStatus,omitempty" type:"Struct"`
 	// The universally unique identifier (UUID) of the container group, which is similar to the unique identifier (UID) of the Kubernetes pod in terms of the concept and usage.
-	Status *string `json:"Status,omitempty" xml:"Status,omitempty"`
+	Status *string `json:"status,omitempty" xml:"status,omitempty"`
 	// The ID of the container group.
 	Uuid *string `json:"uuid,omitempty" xml:"uuid,omitempty"`
 }
@@ -5669,15 +5669,15 @@ func (s *DescribeContainerGroupStatusResponseBodyData) SetUuid(v string) *Descri
 
 type DescribeContainerGroupStatusResponseBodyDataPodStatus struct {
 	// The exit code.
-	Conditions []*DescribeContainerGroupStatusResponseBodyDataPodStatusConditions `json:"Conditions,omitempty" xml:"Conditions,omitempty" type:"Repeated"`
+	Conditions []*DescribeContainerGroupStatusResponseBodyDataPodStatusConditions `json:"conditions,omitempty" xml:"conditions,omitempty" type:"Repeated"`
 	// The container is created and running.
-	ContainerStatuses []*DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatuses `json:"ContainerStatuses,omitempty" xml:"ContainerStatuses,omitempty" type:"Repeated"`
-	HostIp            *string                                                                   `json:"HostIp,omitempty" xml:"HostIp,omitempty"`
-	Phase             *string                                                                   `json:"Phase,omitempty" xml:"Phase,omitempty"`
-	PodIp             *string                                                                   `json:"PodIp,omitempty" xml:"PodIp,omitempty"`
-	PodIps            []*DescribeContainerGroupStatusResponseBodyDataPodStatusPodIps            `json:"PodIps,omitempty" xml:"PodIps,omitempty" type:"Repeated"`
-	QosClass          *string                                                                   `json:"QosClass,omitempty" xml:"QosClass,omitempty"`
-	StartTime         *string                                                                   `json:"StartTime,omitempty" xml:"StartTime,omitempty"`
+	ContainerStatuses []*DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatuses `json:"containerStatuses,omitempty" xml:"containerStatuses,omitempty" type:"Repeated"`
+	HostIp            *string                                                                   `json:"hostIp,omitempty" xml:"hostIp,omitempty"`
+	Phase             *string                                                                   `json:"phase,omitempty" xml:"phase,omitempty"`
+	PodIp             *string                                                                   `json:"podIp,omitempty" xml:"podIp,omitempty"`
+	PodIps            []*DescribeContainerGroupStatusResponseBodyDataPodStatusPodIps            `json:"podIps,omitempty" xml:"podIps,omitempty" type:"Repeated"`
+	QosClass          *string                                                                   `json:"qosClass,omitempty" xml:"qosClass,omitempty"`
+	StartTime         *string                                                                   `json:"startTime,omitempty" xml:"startTime,omitempty"`
 }
 
 func (s DescribeContainerGroupStatusResponseBodyDataPodStatus) String() string {
@@ -5730,9 +5730,9 @@ func (s *DescribeContainerGroupStatusResponseBodyDataPodStatus) SetStartTime(v s
 
 type DescribeContainerGroupStatusResponseBodyDataPodStatusConditions struct {
 	// The container is terminated and exits after a successful or failed run.
-	Message *string `json:"Message,omitempty" xml:"Message,omitempty"`
+	Message *string `json:"message,omitempty" xml:"message,omitempty"`
 	// The number of times that the container restarted.
-	Reason *string `json:"Reason,omitempty" xml:"Reason,omitempty"`
+	Reason *string `json:"reason,omitempty" xml:"reason,omitempty"`
 	// The time when the status last changed.
 	LastTransitionTime *string `json:"lastTransitionTime,omitempty" xml:"lastTransitionTime,omitempty"`
 	// The ID of the resource group to which the container groups belong.
@@ -5776,29 +5776,29 @@ func (s *DescribeContainerGroupStatusResponseBodyDataPodStatusConditions) SetTyp
 
 type DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatuses struct {
 	// The total number of entries returned.
-	Image *string `json:"Image,omitempty" xml:"Image,omitempty"`
+	Image *string `json:"image,omitempty" xml:"image,omitempty"`
 	// The reason for the transition into the current status of the event.
-	ImageID   *string                                                                          `json:"ImageID,omitempty" xml:"ImageID,omitempty"`
-	LastState *DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastState `json:"LastState,omitempty" xml:"LastState,omitempty" type:"Struct"`
+	ImageID   *string                                                                          `json:"imageID,omitempty" xml:"imageID,omitempty"`
+	LastState *DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastState `json:"lastState,omitempty" xml:"lastState,omitempty" type:"Struct"`
 	// The status of the container group.
-	Name *string `json:"Name,omitempty" xml:"Name,omitempty"`
+	Name *string `json:"name,omitempty" xml:"name,omitempty"`
 	// The state of the container. Valid values:
 	//
 	// *   Waiting
 	// *   Running
 	// *   Terminated
-	Ready *bool `json:"Ready,omitempty" xml:"Ready,omitempty"`
+	Ready *bool `json:"ready,omitempty" xml:"ready,omitempty"`
 	// The type of the pod condition. Valid values:
 	//
 	// *   PodScheduled
 	// *   Ready
 	// *   Initialized
 	// *   Unschedulable
-	RestartCount *int32 `json:"RestartCount,omitempty" xml:"RestartCount,omitempty"`
+	RestartCount *int32 `json:"restartCount,omitempty" xml:"restartCount,omitempty"`
 	// The IDs of the container groups. You can specify up to 20 IDs. Each ID must be a string in the JSON format.
-	Started *bool `json:"Started,omitempty" xml:"Started,omitempty"`
+	Started *bool `json:"started,omitempty" xml:"started,omitempty"`
 	// The signal code.
-	State *DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesState `json:"State,omitempty" xml:"State,omitempty" type:"Struct"`
+	State *DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesState `json:"state,omitempty" xml:"state,omitempty" type:"Struct"`
 }
 
 func (s DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatuses) String() string {
@@ -5850,9 +5850,9 @@ func (s *DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatuses)
 }
 
 type DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastState struct {
-	Running    *DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateRunning    `json:"Running,omitempty" xml:"Running,omitempty" type:"Struct"`
-	Terminated *DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateTerminated `json:"Terminated,omitempty" xml:"Terminated,omitempty" type:"Struct"`
-	Waiting    *DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateWaiting    `json:"Waiting,omitempty" xml:"Waiting,omitempty" type:"Struct"`
+	Running    *DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateRunning    `json:"running,omitempty" xml:"running,omitempty" type:"Struct"`
+	Terminated *DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateTerminated `json:"terminated,omitempty" xml:"terminated,omitempty" type:"Struct"`
+	Waiting    *DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateWaiting    `json:"waiting,omitempty" xml:"waiting,omitempty" type:"Struct"`
 }
 
 func (s DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastState) String() string {
@@ -5879,7 +5879,7 @@ func (s *DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesL
 }
 
 type DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateRunning struct {
-	StartedAtstartedAt *string `json:"StartedAtstartedAt,omitempty" xml:"StartedAtstartedAt,omitempty"`
+	StartedAtstartedAt *string `json:"startedAt,omitempty" xml:"startedAt,omitempty"`
 }
 
 func (s DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateRunning) String() string {
@@ -5896,13 +5896,13 @@ func (s *DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesL
 }
 
 type DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateTerminated struct {
-	ContainerID *string `json:"ContainerID,omitempty" xml:"ContainerID,omitempty"`
-	ExitCode    *int32  `json:"ExitCode,omitempty" xml:"ExitCode,omitempty"`
-	FinishedAt  *string `json:"FinishedAt,omitempty" xml:"FinishedAt,omitempty"`
-	Message     *string `json:"Message,omitempty" xml:"Message,omitempty"`
-	Reason      *string `json:"Reason,omitempty" xml:"Reason,omitempty"`
-	Signal      *int32  `json:"Signal,omitempty" xml:"Signal,omitempty"`
-	StartedAt   *string `json:"StartedAt,omitempty" xml:"StartedAt,omitempty"`
+	ContainerID *string `json:"containerID,omitempty" xml:"containerID,omitempty"`
+	ExitCode    *int32  `json:"exitCode,omitempty" xml:"exitCode,omitempty"`
+	FinishedAt  *string `json:"finishedAt,omitempty" xml:"finishedAt,omitempty"`
+	Message     *string `json:"message,omitempty" xml:"message,omitempty"`
+	Reason      *string `json:"reason,omitempty" xml:"reason,omitempty"`
+	Signal      *int32  `json:"signal,omitempty" xml:"signal,omitempty"`
+	StartedAt   *string `json:"startedAt,omitempty" xml:"startedAt,omitempty"`
 }
 
 func (s DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateTerminated) String() string {
@@ -5949,8 +5949,8 @@ func (s *DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesL
 }
 
 type DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateWaiting struct {
-	Message *string `json:"Message,omitempty" xml:"Message,omitempty"`
-	Reason  *string `json:"Reason,omitempty" xml:"Reason,omitempty"`
+	Message *string `json:"message,omitempty" xml:"message,omitempty"`
+	Reason  *string `json:"reason,omitempty" xml:"reason,omitempty"`
 }
 
 func (s DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateWaiting) String() string {
@@ -5973,11 +5973,11 @@ func (s *DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesL
 
 type DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesState struct {
 	// The value of tag N.
-	Running *DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateRunning `json:"Running,omitempty" xml:"Running,omitempty" type:"Struct"`
+	Running *DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateRunning `json:"running,omitempty" xml:"running,omitempty" type:"Struct"`
 	// The namespace in which the container group resides.
-	Terminated *DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateTerminated `json:"Terminated,omitempty" xml:"Terminated,omitempty" type:"Struct"`
+	Terminated *DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateTerminated `json:"terminated,omitempty" xml:"terminated,omitempty" type:"Struct"`
 	// A relative time in seconds before the current time from which to show container groups whose status changes. This parameter is used to poll status of container groups.
-	Waiting *DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateWaiting `json:"Waiting,omitempty" xml:"Waiting,omitempty" type:"Struct"`
+	Waiting *DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateWaiting `json:"waiting,omitempty" xml:"waiting,omitempty" type:"Struct"`
 }
 
 func (s DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesState) String() string {
@@ -6007,7 +6007,7 @@ type DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesState
 	// Specifies the maximum number of container groups to be returned for this request. Default value: 200.
 	//
 	// >  The number of container groups to be returned is no greater than this parameter value.
-	StartedAtstartedAt *string `json:"StartedAtstartedAt,omitempty" xml:"StartedAtstartedAt,omitempty"`
+	StartedAtstartedAt *string `json:"startedAt,omitempty" xml:"startedAt,omitempty"`
 }
 
 func (s DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateRunning) String() string {
@@ -6025,17 +6025,17 @@ func (s *DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesS
 
 type DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateTerminated struct {
 	// The reason for the transition into the current status of the event.
-	ContainerID *string `json:"ContainerID,omitempty" xml:"ContainerID,omitempty"`
+	ContainerID *string `json:"containerID,omitempty" xml:"containerID,omitempty"`
 	// The name of the container group.
-	ExitCode *int32 `json:"ExitCode,omitempty" xml:"ExitCode,omitempty"`
+	ExitCode *int32 `json:"exitCode,omitempty" xml:"exitCode,omitempty"`
 	// The status of the pod condition.
-	FinishedAt *string `json:"FinishedAt,omitempty" xml:"FinishedAt,omitempty"`
-	Message    *string `json:"Message,omitempty" xml:"Message,omitempty"`
-	Reason     *string `json:"Reason,omitempty" xml:"Reason,omitempty"`
+	FinishedAt *string `json:"finishedAt,omitempty" xml:"finishedAt,omitempty"`
+	Message    *string `json:"message,omitempty" xml:"message,omitempty"`
+	Reason     *string `json:"reason,omitempty" xml:"reason,omitempty"`
 	// Queries the status of multiple container groups at a time.
-	Signal *int32 `json:"Signal,omitempty" xml:"Signal,omitempty"`
+	Signal *int32 `json:"signal,omitempty" xml:"signal,omitempty"`
 	// The ID of the request.
-	StartedAt *string `json:"StartedAt,omitempty" xml:"StartedAt,omitempty"`
+	StartedAt *string `json:"startedAt,omitempty" xml:"startedAt,omitempty"`
 }
 
 func (s DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateTerminated) String() string {
@@ -6083,11 +6083,11 @@ func (s *DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesS
 
 type DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateWaiting struct {
 	// The event message.
-	Message *string `json:"Message,omitempty" xml:"Message,omitempty"`
+	Message *string `json:"message,omitempty" xml:"message,omitempty"`
 	// The token that is used for the next query. If this parameter is empty, all results have been returned.
 	//
 	// You do not need to specify this parameter in the first request. You can obtain the token from the result returned by the previous request.
-	Reason *string `json:"Reason,omitempty" xml:"Reason,omitempty"`
+	Reason *string `json:"reason,omitempty" xml:"reason,omitempty"`
 }
 
 func (s DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateWaiting) String() string {
@@ -6109,7 +6109,7 @@ func (s *DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesS
 }
 
 type DescribeContainerGroupStatusResponseBodyDataPodStatusPodIps struct {
-	Ip *string `json:"Ip,omitempty" xml:"Ip,omitempty"`
+	Ip *string `json:"ip,omitempty" xml:"ip,omitempty"`
 }
 
 func (s DescribeContainerGroupStatusResponseBodyDataPodStatusPodIps) String() string {
