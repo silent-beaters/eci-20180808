@@ -1,3 +1,6 @@
+2024-04-17 Version: v3.0.4
+- Add privateIpAddress parameter
+
 2023-05-05 Version: v3.0.3
 - Spot commit imc expired.
 

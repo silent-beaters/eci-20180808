@@ -445,6 +445,8 @@ type CreateContainerGroupRequest struct {
 	//
 	// If you do not specify a security group, the system automatically uses the default security group in the region that you selected. Make sure that the inbound rules of the security group contain the container protocols and port numbers that you want to expose. If you do not have a default security group in the region, the system creates a default security group, and then adds the container protocols and port numbers that you specified to the inbound rules of the security group.
 	SecurityGroupId *string `json:"SecurityGroupId,omitempty" xml:"SecurityGroupId,omitempty"`
+	// Specify the private IP address of the ECI instance. Currently, only specified IPv4 addresses are supported. Please ensure that the IP address is not occupied.
+	PrivateIpAddress *string `json:"PrivateIpAddress,omitempty" xml:"PrivateIpAddress,omitempty"`
 	// Specifies whether to use a shared namespace. Default value: false.
 	ShareProcessNamespace *bool `json:"ShareProcessNamespace,omitempty" xml:"ShareProcessNamespace,omitempty"`
 	// The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values: 0 to 6.
@@ -734,6 +736,11 @@ func (s *CreateContainerGroupRequest) SetScheduleStrategy(v string) *CreateConta
 
 func (s *CreateContainerGroupRequest) SetSecurityGroupId(v string) *CreateContainerGroupRequest {
 	s.SecurityGroupId = &v
+	return s
+}
+
+func (s *CreateContainerGroupRequest) SetPrivateIpAddress(v string) *CreateContainerGroupRequest {
+	s.PrivateIpAddress = &v
 	return s
 }
 
@@ -12960,6 +12967,10 @@ func (client *Client) CreateContainerGroupWithOptions(request *CreateContainerGr
 
 	if !tea.BoolValue(util.IsUnset(request.SecurityGroupId)) {
 		query["SecurityGroupId"] = request.SecurityGroupId
+	}
+
+	if !tea.BoolValue(util.IsUnset(request.PrivateIpAddress)) {
+		query["PrivateIpAddress"] = request.PrivateIpAddress
 	}
 
 	if !tea.BoolValue(util.IsUnset(request.ShareProcessNamespace)) {
